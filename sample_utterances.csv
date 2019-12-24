@@ -1,0 +1,32 @@
+turn the fan to {power_mode}
+turn the fan {power_mode}
+turn the fan to {power_level}
+set the fan to {power_level}
+set the fan to {temp_level} degrees
+turn the fan to {temp_level} degrees
+set the fan to {temp_level} degree
+turn the fan to {temp_level} degree
+turn the fan to {power_level} on {temp_mode} at {temp_level} degrees
+set the fan to {temp_mode} on {power_level} at {temp_level} degrees
+set the fan to {temp_mode} at {temp_level} degrees
+set the fan to {power_level} at {temp_mode} at {temp_level} degrees
+set the fan to {temp_mode} at {power_level} at {temp_level} degrees
+turn the fan to {temp_mode} at {power_level} at {temp_level} degrees
+turn the fan to {temp_mode} on {power_level} at {temp_level} degrees
+turn the fan to {temp_mode} at {temp_level} degrees
+turn the fan to {power_level} on {temp_mode} at {temp_level} degree
+set the fan to {temp_mode} on {power_level} at {temp_level} degree
+set the fan to {temp_mode} at {temp_level} degree
+set the fan to {power_level} at {temp_mode} at {temp_level} degree
+set the fan to {temp_mode} at {power_level} at {temp_level} degree
+turn the fan to {temp_mode} at {power_level} at {temp_level} degree
+turn the fan to {temp_mode} on {power_level} at {temp_level} degree
+turn the fan to {temp_mode} at {temp_level} degree
+turn the fan to {power_level} on {temp_mode}
+set the fan to {temp_mode} on {power_level}
+set the fan to {temp_mode}
+set the fan to {power_level} at {temp_mode}
+set the fan to {temp_mode} at {power_level}
+turn the fan to {temp_mode} at {power_level}
+turn the fan to {temp_mode} on {power_level}
+turn the fan to {temp_mode}
