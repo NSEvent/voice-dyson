@@ -1,6 +1,22 @@
 from flask import Flask
-from flask_ask import Ask, statement, question, session
+from flask_ask import Ask, statement, question, session, request
 import json
+
+def get_slot_value(slot_name):
+    """Return canonical slot value (entity resolution)."""
+
+    slots = request['intent']['slots']
+    value = None
+
+    slot = slots[slot_name]
+    if 'value' in slot:
+        value = slot['value']
+        # Use canonical value (entity resolution) if exists
+        if 'resolutions' in slot and slot['resolutions']['resolutionsPerAuthority'][0]['status']['code'] == 'ER_SUCCESS_MATCH':
+            value = slot['resolutions']['resolutionsPerAuthority'][0]['values'][0]['value']['name']
+
+    return value
+
 
 # Set Alexa endpoint to ngrok.link/voice_dyson
 # Select second option for endpoint:
@@ -19,13 +35,15 @@ def start_skill():
     return statement(speech_text)
 
 @ask.intent('set_fan_settings')
-def set_fan_settings(temp_mode, fan_num, degrees, power_mode):
+def set_fan_settings():
+# Can get slots this way, but does not automatically resolve synonyms
+# def set_fan_settings(temp_mode, fan_num, degrees, power_mode):
 
     # Using sdk
-    # power_mode = get_slot_value(handler_input=handler_input, slot_name="power_mode")
-    # temp_mode = get_slot_value(handler_input=handler_input, slot_name="temp_mode")
-    # fan_num = get_slot_value(handler_input=handler_input, slot_name="fan_num")
-    # degrees = get_slot_value(handler_input=handler_input, slot_name="degrees")
+    power_mode = get_slot_value("power_mode")
+    temp_mode = get_slot_value("temp_mode")
+    fan_num = get_slot_value("fan_num")
+    degrees = get_slot_value("degrees")
 
     output = []
 
