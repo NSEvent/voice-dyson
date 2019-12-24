@@ -30,18 +30,17 @@ class LaunchRequestHandler(AbstractRequestHandler):
         return handler_input.response_builder.response
 
 
-class HelloWorldIntentHandler(AbstractRequestHandler):
-    """Handler for Hello World Intent."""
+class SetFanSettingsIntentHandler(AbstractRequestHandler):
+    """Handler for set_fan_settings Intent."""
     def can_handle(self, handler_input):
         # type: (HandlerInput) -> bool
-        return is_intent_name("HelloWorldIntent")(handler_input)
+        return is_intent_name("set_fan_settings")(handler_input)
 
     def handle(self, handler_input):
         # type: (HandlerInput) -> Response
-        speech_text = "Hello Python World from Classes!"
+        speech_text = "Okay"
 
-        handler_input.response_builder.speak(speech_text).set_card(
-            SimpleCard("Hello World", speech_text)).set_should_end_session(
+        handler_input.response_builder.speak(speech_text).set_should_end_session(
             True)
         return handler_input.response_builder.response
 
@@ -54,11 +53,10 @@ class HelpIntentHandler(AbstractRequestHandler):
 
     def handle(self, handler_input):
         # type: (HandlerInput) -> Response
-        speech_text = "You can say hello to me!"
+        speech_text = "You can ask me to change the settings on your Dyson fan"
 
         handler_input.response_builder.speak(speech_text).ask(
-            speech_text).set_card(SimpleCard(
-                "Hello World", speech_text))
+            speech_text)
         return handler_input.response_builder.response
 
 
@@ -71,10 +69,9 @@ class CancelOrStopIntentHandler(AbstractRequestHandler):
 
     def handle(self, handler_input):
         # type: (HandlerInput) -> Response
-        speech_text = "Goodbye!"
+        speech_text = "Okay"
 
-        handler_input.response_builder.speak(speech_text).set_card(
-            SimpleCard("Hello World", speech_text))
+        handler_input.response_builder.speak(speech_text)
         return handler_input.response_builder.response
 
 
@@ -89,11 +86,8 @@ class FallbackIntentHandler(AbstractRequestHandler):
 
     def handle(self, handler_input):
         # type: (HandlerInput) -> Response
-        speech_text = (
-            "The Hello World skill can't help you with that.  "
-            "You can say hello!!")
-        reprompt = "You can say hello!!"
-        handler_input.response_builder.speak(speech_text).ask(reprompt)
+        speech_text = "This is an Alexa voice app for adjusting Dyson fan settings"
+        handler_input.response_builder.speak(speech_text)
         return handler_input.response_builder.response
 
 
