@@ -2,6 +2,26 @@ from flask import Flask
 from flask_ask import Ask, statement, question, session, request
 import json
 
+def set_power_mode(power_mode):
+    """Use LIRC to send on/off signal
+        Expects power_mode = 'on'/'off'."""
+    # # TODO:
+
+def set_temp_mode(temp_mode):
+    """Use LIRC to send hot/cold signal
+        Expects temp_mode = 'hot'/'cold'."""
+    # # TODO:
+
+def set_power_level(power_level):
+    """Use LIRC to adjust to 1-9 fan level
+        Expects power_level >= 1 and power_level <= 9."""
+    # # TODO:
+
+def set_temp_level(temp_level):
+    """Use LIRC to adjust to 60-90 fan temperature
+        Expects temp_level >= 60 and temp_level <= 90."""
+    # # TODO:
+
 def get_slot_value(slot_name):
     """Return canonical slot value (entity resolution)."""
 
@@ -31,31 +51,34 @@ def homepage():
 
 @ask.launch
 def start_skill():
-    speech_text = "Eat more raspberry pie"
+    speech_text = "Hi Mom, Hi popcorn, please Eat more raspberry pie. I like to eat cheesecake"
     return statement(speech_text)
 
 @ask.intent('set_fan_settings')
 def set_fan_settings():
 # Can get slots this way, but does not automatically resolve synonyms
-# def set_fan_settings(temp_mode, fan_num, degrees, power_mode):
+# def set_fan_settings(temp_mode, power_level, temp_level, power_mode):
 
     # Using sdk
-    power_mode = get_slot_value("power_mode")
-    temp_mode = get_slot_value("temp_mode")
-    fan_num = get_slot_value("fan_num")
-    degrees = get_slot_value("degrees")
+    power_mode = get_slot_value("power_mode") # 'on' or 'off'
+    temp_mode = get_slot_value("temp_mode") # 'hot' or 'cold'
+    power_level = get_slot_value("power_level") # 1-9
+    temp_level = get_slot_value("temp_level") # 60-90
 
     output = []
 
     if power_mode:
-        output.append(f'Power was toggled to {power_mode}')
-    # TODO: Temp mode does not resolve to hot and cold, can be warm or cool currently
+        output.append(f'Power mode was toggled to {power_mode}')
+        set_power_mode(power_mode)
     if temp_mode:
         output.append(f'Temp mode was toggled to {temp_mode}')
-    if fan_num:
-        output.append(f'Fan number was toggled to {fan_num}')
-    if degrees:
-        output.append(f'Fan was toggled to {degrees} degrees')
+        set_temp_mode(temp_mode)
+    if power_level:
+        output.append(f'Power level was toggled to {power_level}')
+        set_power_level(power_level)
+    if temp_level:
+        output.append(f'Temp level was toggled to {temp_level} degrees')
+        set_temp_level(temp_level)
 
     output.append('Ending set fan settings intent handling')
 
