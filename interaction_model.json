@@ -1,7 +1,7 @@
 {
     "interactionModel": {
         "languageModel": {
-            "invocationName": "raspberry pie",
+            "invocationName": "dyson fan",
             "intents": [
                 {
                     "name": "AMAZON.CancelIntent",
@@ -39,41 +39,232 @@
                             "type": "temp_mode"
                         },
                         {
-                            "name": "fan_num",
+                            "name": "power_level",
                             "type": "AMAZON.NUMBER"
                         },
                         {
-                            "name": "degrees",
+                            "name": "temp_level",
                             "type": "AMAZON.NUMBER"
-                        },
-                        {
-                            "name": "power_mode",
-                            "type": "power_mode"
                         }
                     ],
                     "samples": [
-                        "set the fan to {degrees} degrees",
-                        "turn the fan to {degrees} degrees",
-                        "turn the fan to {power_mode}",
-                        "turn the fan {power_mode}",
-                        "turn the fan to {fan_num}",
-                        "set the fan to {fan_num}",
-                        "turn the fan to {fan_num} on {temp_mode} at {degrees} degrees",
-                        "set the fan to {temp_mode} on {fan_num} at {degrees} degrees",
-                        "set the fan to {temp_mode} at {degrees} degrees",
-                        "set the fan to {fan_num} at {temp_mode} at {degrees} degrees",
-                        "set the fan to {temp_mode} at {fan_num} at {degrees} degrees",
-                        "turn the fan to {temp_mode} at {fan_num} at {degrees} degrees",
-                        "turn the fan to {temp_mode} on {fan_num} at {degrees} degrees",
-                        "turn the fan to {temp_mode} at {degrees} degrees",
-                        "turn the fan to {fan_num} on {temp_mode}",
-                        "set the fan to {temp_mode} on {fan_num}",
-                        "set the fan to {temp_mode}",
-                        "set the fan to {fan_num} at {temp_mode}",
-                        "set the fan to {temp_mode} at {fan_num}",
-                        "turn the fan to {temp_mode} at {fan_num}",
-                        "turn the fan to {temp_mode} on {fan_num}",
-                        "turn the fan to {temp_mode}"
+                        "turn to {power_level}",
+                        "set to {power_level}",
+                        "change to {power_level}",
+                        "turn to level {power_level}",
+                        "set to level {power_level}",
+                        "change to level {power_level}",
+                        "turn to power level {power_level}",
+                        "set to power level {power_level}",
+                        "change to power level {power_level}",
+                        "turn level to {power_level}",
+                        "set level to {power_level}",
+                        "change level to {power_level}",
+                        "turn level to level {power_level}",
+                        "set level to level {power_level}",
+                        "change level to level {power_level}",
+                        "turn to power level {power_level}",
+                        "set to power level {power_level}",
+                        "change to power level {power_level}",
+                        "turn power level to {power_level}",
+                        "set power level to {power_level}",
+                        "change power level to {power_level}",
+                        "turn power level to level {power_level}",
+                        "set power level to level {power_level}",
+                        "change level to level {power_level}",
+                        "set to {temp_level} degrees",
+                        "turn to {temp_level} degrees",
+                        "set to {temp_level} degree",
+                        "turn to {temp_level} degree",
+                        "set temperature to {temp_level} degrees",
+                        "set the temperature to {temp_level} degrees",
+                        "set temperature to {temp_level} degree",
+                        "set the temperature to {temp_level} degree",
+                        "turn temperature to {temp_level} degrees",
+                        "turn the temperature to {temp_level} degrees",
+                        "turn temperature to {temp_level} degree",
+                        "turn the temperature to {temp_level} degree",
+                        "change temperature to {temp_level} degrees",
+                        "change the temperature to {temp_level} degrees",
+                        "change temperature to {temp_level} degree",
+                        "change the temperature to {temp_level} degree",
+                        "set temperature to {temp_level}",
+                        "set the temperature to {temp_level}",
+                        "set temperature to {temp_level}",
+                        "set the temperature to {temp_level}",
+                        "turn temperature to {temp_level}",
+                        "turn the temperature to {temp_level}",
+                        "turn temperature to {temp_level}",
+                        "turn the temperature to {temp_level}",
+                        "change temperature to {temp_level}",
+                        "change the temperature to {temp_level}",
+                        "change temperature to {temp_level}",
+                        "change the temperature to {temp_level}",
+                        "change mode to {temp_mode}",
+                        "change to {temp_mode} mode",
+                        "change to {temp_mode}",
+                        "turn to {power_level} on {temp_mode} at {temp_level} degrees",
+                        "set to {temp_mode} on {power_level} at {temp_level} degrees",
+                        "set to {temp_mode} at {temp_level} degrees",
+                        "set to {power_level} at {temp_mode} at {temp_level} degrees",
+                        "set to {temp_mode} at {power_level} at {temp_level} degrees",
+                        "turn to {temp_mode} at {power_level} at {temp_level} degrees",
+                        "turn to {temp_mode} on {power_level} at {temp_level} degrees",
+                        "turn to {temp_mode} at {temp_level} degrees",
+                        "turn to {power_level} on {temp_mode} at {temp_level} degree",
+                        "set to {temp_mode} on {power_level} at {temp_level} degree",
+                        "set to {temp_mode} at {temp_level} degree",
+                        "set to {power_level} at {temp_mode} at {temp_level} degree",
+                        "set to {temp_mode} at {power_level} at {temp_level} degree",
+                        "turn to {temp_mode} at {power_level} at {temp_level} degree",
+                        "turn to {temp_mode} on {power_level} at {temp_level} degree",
+                        "turn to {temp_mode} at {temp_level} degree",
+                        "turn to {power_level} on {temp_mode}",
+                        "set to {temp_mode} on {power_level}",
+                        "set to {temp_mode}",
+                        "set to {power_level} at {temp_mode}",
+                        "set to {temp_mode} at {power_level}",
+                        "turn to {temp_mode} at {power_level}",
+                        "turn to {temp_mode} on {power_level}",
+                        "turn to {temp_mode}",
+                        "turn to level {power_level}",
+                        "turn to power level {power_level}",
+                        "set to level {power_level}",
+                        "set to power level {power_level}",
+                        "turn to level {power_level} on {temp_mode} at {temp_level} degrees",
+                        "turn to power level {power_level} on {temp_mode} at {temp_level} degrees",
+                        "turn to level {power_level} on {temp_mode} mode at {temp_level} degrees",
+                        "turn to power level {power_level} on {temp_mode} mode at {temp_level} degrees",
+                        "turn to {power_level} on {temp_mode} mode at {temp_level} degrees",
+                        "turn to {power_level} on {temp_mode} mode at {temp_level} degrees",
+                        "set to {temp_mode} on level {power_level} at {temp_level} degrees",
+                        "set to {temp_mode} on power level {power_level} at {temp_level} degrees",
+                        "set to {temp_mode} mode on level {power_level} at {temp_level} degrees",
+                        "set to {temp_mode} mode on power level {power_level} at {temp_level} degrees",
+                        "set to {temp_mode} mode on {power_level} at {temp_level} degrees",
+                        "set to {temp_mode} mode on {power_level} at {temp_level} degrees",
+                        "set to {temp_mode} mode at {temp_level} degrees",
+                        "set to level {power_level} at {temp_mode} at {temp_level} degrees",
+                        "set to power level {power_level} at {temp_mode} at {temp_level} degrees",
+                        "set to level {power_level} at {temp_mode} mode at {temp_level} degrees",
+                        "set to power level {power_level} at {temp_mode} mode at {temp_level} degrees",
+                        "set to {power_level} at {temp_mode} mode at {temp_level} degrees",
+                        "set to {power_level} at {temp_mode} mode at {temp_level} degreess",
+                        "set to {temp_mode} at {power_level} at {temp_level} degrees",
+                        "turn to {temp_mode} at {power_level} at {temp_level} degrees",
+                        "turn to {temp_mode} on {power_level} at {temp_level} degrees",
+                        "set to {temp_mode} mode at {power_level} at {temp_level} degrees",
+                        "turn to {temp_mode} mode at {power_level} at {temp_level} degrees",
+                        "turn to {temp_mode} mode on {power_level} at {temp_level} degrees",
+                        "set to {temp_mode} at level {power_level} at {temp_level} degrees",
+                        "turn to {temp_mode} at level {power_level} at {temp_level} degrees",
+                        "turn to {temp_mode} on level {power_level} at {temp_level} degrees",
+                        "set to {temp_mode} mode at level {power_level} at {temp_level} degrees",
+                        "turn to {temp_mode} mode at level {power_level} at {temp_level} degrees",
+                        "turn to {temp_mode} mode on level {power_level} at {temp_level} degrees",
+                        "turn to {temp_mode} mode at {temp_level} degrees",
+                        "turn to {temp_mode} at {temp_level} degrees",
+                        "turn to level {power_level} on {temp_mode} at {temp_level} degree",
+                        "turn to power level {power_level} on {temp_mode} at {temp_level} degree",
+                        "turn to {power_level} on {temp_mode} mode at {temp_level} degree",
+                        "turn to level {power_level} on {temp_mode} mode at {temp_level} degree",
+                        "turn to power level {power_level} on {temp_mode} mode at {temp_level} degree",
+                        "set to {temp_mode} on {power_level} at {temp_level} degree",
+                        "set to {temp_mode} mode at {temp_level} degree",
+                        "set to level {power_level} at {temp_mode} at {temp_level} degree",
+                        "set to power level {power_level} at {temp_mode} at {temp_level} degree",
+                        "set to {power_level} at {temp_mode} mode at {temp_level} degree",
+                        "set to level {power_level} at {temp_mode} mode at {temp_level} degree",
+                        "set to power level {power_level} at {temp_mode} mode at {temp_level} degree",
+                        "set to {temp_mode} mode at {power_level} at {temp_level} degree",
+                        "set to {temp_mode} mode at level {power_level} at {temp_level} degree",
+                        "set to {temp_mode} mode at power level {power_level} at {temp_level} degree",
+                        "set to {temp_mode} at {power_level} at {temp_level} degree",
+                        "set to {temp_mode} at level {power_level} at {temp_level} degree",
+                        "set to {temp_mode} at power level {power_level} at {temp_level} degree",
+                        "turn to {temp_mode} mode at {power_level} at {temp_level} degree",
+                        "turn to {temp_mode} mode at level {power_level} at {temp_level} degree",
+                        "turn to {temp_mode} mode at power level {power_level} at {temp_level} degree",
+                        "turn to {temp_mode} at level {power_level} at {temp_level} degree",
+                        "turn to {temp_mode} at power level {power_level} at {temp_level} degree",
+                        "turn to {temp_mode} mode on {power_level} at {temp_level} degree",
+                        "turn to {temp_mode} mode on level {power_level} at {temp_level} degree",
+                        "turn to {temp_mode} mode on power level {power_level} at {temp_level} degree",
+                        "turn to {temp_mode} on level {power_level} at {temp_level} degree",
+                        "turn to {temp_mode} on power level {power_level} at {temp_level} degree",
+                        "turn to {temp_mode} at {temp_level} degree",
+                        "turn to {temp_mode} mode at {temp_level} degree",
+                        "turn to {power_level} on {temp_mode}",
+                        "turn to level {power_level} on {temp_mode}",
+                        "turn to power level {power_level} on {temp_mode}",
+                        "turn to {power_level} on {temp_mode} mode",
+                        "turn to level {power_level} on {temp_mode} mode",
+                        "turn to power level {power_level} on {temp_mode} mode",
+                        "set to {temp_mode} on {power_level}",
+                        "set to {temp_mode} on level {power_level}",
+                        "set to {temp_mode} on power level {power_level}",
+                        "set to {temp_mode} mode on {power_level}",
+                        "set to {temp_mode} mode on level {power_level}",
+                        "set to {temp_mode} mode on power level {power_level}",
+                        "set to {temp_mode}",
+                        "set to {temp_mode} mode",
+                        "set to {power_level} at {temp_mode}",
+                        "set to {temp_mode} at {power_level}",
+                        "turn to {temp_mode} at {power_level}",
+                        "turn to {temp_mode} on {power_level}",
+                        "set to level {power_level} at {temp_mode}",
+                        "set to level {power_level} at {temp_mode} mode",
+                        "set to {temp_mode} mode at {power_level}",
+                        "turn to {temp_mode} mode at {power_level}",
+                        "turn to {temp_mode} mode on {power_level}",
+                        "set to {temp_mode} mode at level {power_level}",
+                        "turn to {temp_mode} mode at level {power_level}",
+                        "turn to {temp_mode} mode on level {power_level}",
+                        "set to {temp_mode} at level {power_level}",
+                        "turn to {temp_mode} at level {power_level}",
+                        "turn to {temp_mode} on level {power_level}",
+                        "set to {temp_mode} at power level {power_level}",
+                        "turn to {temp_mode} at power level {power_level}",
+                        "turn to {temp_mode} on power level {power_level}",
+                        "turn to {temp_mode}",
+                        "turn to {temp_mode} mode"
+                    ]
+                },
+                {
+                    "name": "toggle_swivvle",
+                    "slots": [],
+                    "samples": [
+                        "go back and forth",
+                        "stop spinning",
+                        "starting spinning",
+                        "spin",
+                        "turn",
+                        "stop swivel",
+                        "stop swiveling",
+                        "stop turning",
+                        "swivel",
+                        "start turning",
+                        "start swiveling",
+                        "start swivel"
+                    ]
+                },
+                {
+                    "name": "toggle_power",
+                    "slots": [],
+                    "samples": [
+                        "toggle power",
+                        "start fan",
+                        "start",
+                        "turn on",
+                        "turn off",
+                        "turn the fan off",
+                        "stop fan",
+                        "stop",
+                        "shutdown",
+                        "turn the power off",
+                        "turn the power on",
+                        "power off",
+                        "power on"
                     ]
                 }
             ],
@@ -96,21 +287,6 @@
                                     "heat",
                                     "warm"
                                 ]
-                            }
-                        }
-                    ]
-                },
-                {
-                    "name": "power_mode",
-                    "values": [
-                        {
-                            "name": {
-                                "value": "off"
-                            }
-                        },
-                        {
-                            "name": {
-                                "value": "on"
                             }
                         }
                     ]
@@ -138,7 +314,7 @@
                             ]
                         },
                         {
-                            "name": "fan_num",
+                            "name": "power_level",
                             "type": "AMAZON.NUMBER",
                             "confirmationRequired": false,
                             "elicitationRequired": false,
@@ -163,7 +339,7 @@
                             ]
                         },
                         {
-                            "name": "degrees",
+                            "name": "temp_level",
                             "type": "AMAZON.NUMBER",
                             "confirmationRequired": false,
                             "elicitationRequired": false,
@@ -180,19 +356,6 @@
                                     "value": "60"
                                 }
                             ]
-                        },
-                        {
-                            "name": "power_mode",
-                            "type": "power_mode",
-                            "confirmationRequired": false,
-                            "elicitationRequired": false,
-                            "prompts": {},
-                            "validations": [
-                                {
-                                    "type": "hasEntityResolutionMatch",
-                                    "prompt": "Slot.Validation.379884397959.700817514600.276827292259"
-                                }
-                            ]
                         }
                     ]
                 }
@@ -205,7 +368,7 @@
                 "variations": [
                     {
                         "type": "PlainText",
-                        "value": "Please use hot or cold to change temperature settings"
+                        "value": "Please say hot or cold to change the temperature mode"
                     }
                 ]
             },
@@ -214,16 +377,7 @@
                 "variations": [
                     {
                         "type": "PlainText",
-                        "value": "Please specify a value that is between one and ten"
-                    }
-                ]
-            },
-            {
-                "id": "Slot.Validation.379884397959.700817514600.276827292259",
-                "variations": [
-                    {
-                        "type": "PlainText",
-                        "value": "Please use on or off to toggle the fan"
+                        "value": "Please say a number between one and ten to change the power level"
                     }
                 ]
             },
@@ -232,7 +386,7 @@
                 "variations": [
                     {
                         "type": "PlainText",
-                        "value": "Please use a temperature that is eighty degrees or below"
+                        "value": "Please say a temperature between sixty and eighty degrees"
                     }
                 ]
             },
@@ -241,7 +395,7 @@
                 "variations": [
                     {
                         "type": "PlainText",
-                        "value": "Please use a temperature that is sixty degrees or below"
+                        "value": "Please say a temperature between sixty and eighty degrees"
                     }
                 ]
             }
