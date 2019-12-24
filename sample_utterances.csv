@@ -40,6 +40,18 @@ change temperature to {temp_level} degrees
 change the temperature to {temp_level} degrees
 change temperature to {temp_level} degree
 change the temperature to {temp_level} degree
+set temperature to {temp_level}
+set the temperature to {temp_level}
+set temperature to {temp_level}
+set the temperature to {temp_level}
+turn temperature to {temp_level}
+turn the temperature to {temp_level}
+turn temperature to {temp_level}
+turn the temperature to {temp_level}
+change temperature to {temp_level}
+change the temperature to {temp_level}
+change temperature to {temp_level}
+change the temperature to {temp_level}
 change mode to {temp_mode}
 change to {temp_mode} mode
 change to {temp_mode}
