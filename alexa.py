@@ -12,17 +12,17 @@ def send_swivel():
     # # TODO:
     return
 
-def set_temp_mode(temp_mode):
+def send_temp_mode(temp_mode):
     """Use LIRC to send hot/cold signal
         Expects temp_mode = 'hot'/'cold'."""
     # # TODO:
 
-def set_power_level(power_level):
+def send_power_level(power_level):
     """Use LIRC to adjust to 1-9 fan level
         Expects power_level >= 1 and power_level <= 9."""
     # # TODO:
 
-def set_temp_level(temp_level):
+def send_temp_level(temp_level):
     """Use LIRC to adjust to 60-80 fan temperature
         Expects temp_level >= 60 and temp_level <= 80."""
     # # TODO:
@@ -84,13 +84,13 @@ def set_fan_settings():
 
     if temp_mode:
         output.append(f'Temp mode was toggled to {temp_mode}')
-        set_temp_mode(temp_mode)
+        send_temp_mode(temp_mode)
     if power_level:
         output.append(f'Power level was toggled to {power_level}')
-        set_power_level(power_level)
+        send_power_level(power_level)
     if temp_level:
         output.append(f'Temp level was toggled to {temp_level} degrees')
-        set_temp_level(temp_level)
+        send_temp_level(temp_level)
 
     return statement(', '.join(output))
 
