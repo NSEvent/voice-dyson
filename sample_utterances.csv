@@ -1,5 +1,3 @@
-turn {power_mode}
-power {power_mode}
 turn to {power_level}
 set to {power_level}
 change to {power_level}

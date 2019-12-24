@@ -2,13 +2,13 @@ from flask import Flask
 from flask_ask import Ask, statement, question, session, request
 import json
 
+def send_power():
+    """Use LIRC to send swivel signal."""
+    return
+
 def send_swivel():
     """Use LIRC to send swivel signal."""
-
-def set_power_mode(power_mode):
-    """Use LIRC to send on/off signal
-        Expects power_mode = 'on'/'off'."""
-    # # TODO:
+    return
 
 def set_temp_mode(temp_mode):
     """Use LIRC to send hot/cold signal
@@ -57,10 +57,15 @@ def start_skill():
     speech_text = "You can ask me to change your Dyson fan settings"
     return statement(speech_text)
 
+@ask.intent('toggle_power')
+def toggle_power():
+    send_power()
+    return statement('Okay, ending toggle power intent handling')
+
 @ask.intent('toggle_swivvle')
 def toggle_swivvle():
     send_swivel()
-    return statement('Okay')
+    return statement('Okay, ending toggle swivel intent handling')
 
 @ask.intent('set_fan_settings')
 def set_fan_settings():
@@ -68,16 +73,12 @@ def set_fan_settings():
 # def set_fan_settings(temp_mode, power_level, temp_level, power_mode):
 
     # Using sdk
-    power_mode = get_slot_value("power_mode") # 'on' or 'off'
     temp_mode = get_slot_value("temp_mode") # 'hot' or 'cold'
     power_level = get_slot_value("power_level") # 1-9
     temp_level = get_slot_value("temp_level") # 60-90
 
     output = []
 
-    if power_mode:
-        output.append(f'Power mode was toggled to {power_mode}')
-        set_power_mode(power_mode)
     if temp_mode:
         output.append(f'Temp mode was toggled to {temp_mode}')
         set_temp_mode(temp_mode)
