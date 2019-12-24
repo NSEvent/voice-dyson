@@ -30,3 +30,104 @@ set the fan to {temp_mode} at {power_level}
 turn the fan to {temp_mode} at {power_level}
 turn the fan to {temp_mode} on {power_level}
 turn the fan to {temp_mode}
+turn the fan to level {power_level}
+turn the fan to power level {power_level}
+set the fan to level {power_level}
+set the fan to power level {power_level}
+turn the fan to level {power_level} on {temp_mode} at {temp_level} degrees
+turn the fan to power level {power_level} on {temp_mode} at {temp_level} degrees
+turn the fan to level {power_level} on {temp_mode} mode at {temp_level} degrees
+turn the fan to power level {power_level} on {temp_mode} mode at {temp_level} degrees
+turn the fan to {power_level} on {temp_mode} mode at {temp_level} degrees
+turn the fan to {power_level} on {temp_mode} mode at {temp_level} degrees
+set the fan to {temp_mode} on level {power_level} at {temp_level} degrees
+set the fan to {temp_mode} on power level {power_level} at {temp_level} degrees
+set the fan to {temp_mode} mode on level {power_level} at {temp_level} degrees
+set the fan to {temp_mode} mode on power level {power_level} at {temp_level} degrees
+set the fan to {temp_mode} mode on {power_level} at {temp_level} degrees
+set the fan to {temp_mode} mode on {power_level} at {temp_level} degrees
+set the fan to {temp_mode} mode at {temp_level} degrees
+set the fan to level {power_level} at {temp_mode} at {temp_level} degrees
+set the fan to power level {power_level} at {temp_mode} at {temp_level} degrees
+set the fan to level {power_level} at {temp_mode} mode at {temp_level} degrees
+set the fan to power level {power_level} at {temp_mode} mode at {temp_level} degrees
+set the fan to {power_level} at {temp_mode} mode at {temp_level} degrees
+set the fan to {power_level} at {temp_mode} mode at {temp_level} degreess
+set the fan to {temp_mode} at {power_level} at {temp_level} degrees
+turn the fan to {temp_mode} at {power_level} at {temp_level} degrees
+turn the fan to {temp_mode} on {power_level} at {temp_level} degrees
+set the fan to {temp_mode} mode at {power_level} at {temp_level} degrees
+turn the fan to {temp_mode} mode at {power_level} at {temp_level} degrees
+turn the fan to {temp_mode} mode on {power_level} at {temp_level} degrees
+set the fan to {temp_mode} at level {power_level} at {temp_level} degrees
+turn the fan to {temp_mode} at level {power_level} at {temp_level} degrees
+turn the fan to {temp_mode} on level {power_level} at {temp_level} degrees
+set the fan to {temp_mode} mode at level {power_level} at {temp_level} degrees
+turn the fan to {temp_mode} mode at level {power_level} at {temp_level} degrees
+turn the fan to {temp_mode} mode on level {power_level} at {temp_level} degrees
+turn the fan to {temp_mode} mode at {temp_level} degrees
+turn the fan to {temp_mode} at {temp_level} degrees
+turn the fan to level {power_level} on {temp_mode} at {temp_level} degree
+turn the fan to power level {power_level} on {temp_mode} at {temp_level} degree
+turn the fan to {power_level} on {temp_mode} mode at {temp_level} degree
+turn the fan to level {power_level} on {temp_mode} mode at {temp_level} degree
+turn the fan to power level {power_level} on {temp_mode} mode at {temp_level} degree
+set the fan to {temp_mode} on {power_level} at {temp_level} degree
+set the fan to {temp_mode} mode at {temp_level} degree
+set the fan to level {power_level} at {temp_mode} at {temp_level} degree
+set the fan to power level {power_level} at {temp_mode} at {temp_level} degree
+set the fan to {power_level} at {temp_mode} mode at {temp_level} degree
+set the fan to level {power_level} at {temp_mode} mode at {temp_level} degree
+set the fan to power level {power_level} at {temp_mode} mode at {temp_level} degree
+set the fan to {temp_mode} mode at {power_level} at {temp_level} degree
+set the fan to {temp_mode} mode at level {power_level} at {temp_level} degree
+set the fan to {temp_mode} mode at power level {power_level} at {temp_level} degree
+set the fan to {temp_mode} at {power_level} at {temp_level} degree
+set the fan to {temp_mode} at level {power_level} at {temp_level} degree
+set the fan to {temp_mode} at power level {power_level} at {temp_level} degree
+turn the fan to {temp_mode} mode at {power_level} at {temp_level} degree
+turn the fan to {temp_mode} mode at level {power_level} at {temp_level} degree
+turn the fan to {temp_mode} mode at power level {power_level} at {temp_level} degree
+turn the fan to {temp_mode} at level {power_level} at {temp_level} degree
+turn the fan to {temp_mode} at power level{power_level} at {temp_level} degree
+turn the fan to {temp_mode} mode on {power_level} at {temp_level} degree
+turn the fan to {temp_mode} mode on level {power_level} at {temp_level} degree
+turn the fan to {temp_mode} mode on power level {power_level} at {temp_level} degree
+turn the fan to {temp_mode} on level {power_level} at {temp_level} degree
+turn the fan to {temp_mode} on power level {power_level} at {temp_level} degree
+turn the fan to {temp_mode} at {temp_level} degree
+turn the fan to {temp_mode} mode at {temp_level} degree
+turn the fan to {power_level} on {temp_mode}
+turn the fan to level {power_level} on {temp_mode}
+turn the fan to power level {power_level} on {temp_mode}
+turn the fan to {power_level} on {temp_mode} mode
+turn the fan to level {power_level} on {temp_mode} mode
+turn the fan to power level {power_level} on {temp_mode} mode
+set the fan to {temp_mode} on {power_level}
+set the fan to {temp_mode} on level {power_level}
+set the fan to {temp_mode} on power level {power_level}
+set the fan to {temp_mode} mode on {power_level}
+set the fan to {temp_mode} mode on level {power_level}
+set the fan to {temp_mode} mode on power level {power_level}
+set the fan to {temp_mode}
+set the fan to {temp_mode} mode
+set the fan to {power_level} at {temp_mode}
+set the fan to {temp_mode} at {power_level}
+turn the fan to {temp_mode} at {power_level}
+turn the fan to {temp_mode} on {power_level}
+set the fan to level {power_level} at {temp_mode}
+set the fan to level {power_level} at {temp_mode} mode
+set the fan to {temp_mode} mode at {power_level}
+turn the fan to {temp_mode} mode at {power_level}
+turn the fan to {temp_mode} mode on {power_level}
+set the fan to {temp_mode} mode at level {power_level}
+turn the fan to {temp_mode} mode at level {power_level}
+turn the fan to {temp_mode} mode on level {power_level}
+set the fan to {temp_mode} at level {power_level}
+turn the fan to {temp_mode} at level {power_level}
+turn the fan to {temp_mode} on level {power_level}
+set the fan to {temp_mode} at power level {power_level}
+turn the fan to {temp_mode} at power level {power_level}
+turn the fan to {temp_mode} on power level {power_level}
+turn the fan to {temp_mode}
+turn the fan to {temp_mode} mode
