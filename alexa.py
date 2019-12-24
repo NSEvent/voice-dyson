@@ -2,6 +2,9 @@ from flask import Flask
 from flask_ask import Ask, statement, question, session, request
 import json
 
+def send_swivel():
+    """Use LIRC to send swivel signal."""
+
 def set_power_mode(power_mode):
     """Use LIRC to send on/off signal
         Expects power_mode = 'on'/'off'."""
@@ -47,12 +50,17 @@ app.config["ASK_APPLICATION_ID"] = "amzn1.ask.skill.e033e61a-290c-46cf-b4cb-679d
 
 @app.route('/')
 def homepage():
-    return 'An Alexa skill for toggling Dyson settings'
+    return 'An Alexa skill for toggling Dyson fan settings'
 
 @ask.launch
 def start_skill():
-    speech_text = "Hi Mom, Hi popcorn, please Eat more raspberry pie. I like to eat cheesecake"
+    speech_text = "You can ask me to change your Dyson fan settings"
     return statement(speech_text)
+
+@ask.intent('toggle_swivvle')
+def toggle_swivvle():
+    send_swivel()
+    return statement('Okay')
 
 @ask.intent('set_fan_settings')
 def set_fan_settings():
