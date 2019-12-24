@@ -86,7 +86,7 @@ class FallbackIntentHandler(AbstractRequestHandler):
 
     def handle(self, handler_input):
         # type: (HandlerInput) -> Response
-        speech_text = "This is an Alexa voice app for adjusting Dyson fan settings"
+        speech_text = "This is an Alexa voice skill for adjusting Dyson fan settings"
         handler_input.response_builder.speak(speech_text)
         return handler_input.response_builder.response
 
@@ -119,9 +119,12 @@ class CatchAllExceptionHandler(AbstractExceptionHandler):
 
         return handler_input.response_builder.response
 
+# Set the skill id, this ensures that this request came from your skill
+sb.skill_id = "amzn1.ask.skill.e033e61a-290c-46cf-b4cb-679d9ec858a4"
 
+# Add all request handlers to the skill
 sb.add_request_handler(LaunchRequestHandler())
-sb.add_request_handler(HelloWorldIntentHandler())
+sb.add_request_handler(SetFanSettingsIntentHandler())
 sb.add_request_handler(HelpIntentHandler())
 sb.add_request_handler(CancelOrStopIntentHandler())
 sb.add_request_handler(FallbackIntentHandler())
