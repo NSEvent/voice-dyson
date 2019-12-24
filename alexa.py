@@ -4,10 +4,12 @@ import json
 
 def send_power():
     """Use LIRC to send swivel signal."""
+    # # TODO:
     return
 
 def send_swivel():
     """Use LIRC to send swivel signal."""
+    # # TODO:
     return
 
 def set_temp_mode(temp_mode):
@@ -21,8 +23,8 @@ def set_power_level(power_level):
     # # TODO:
 
 def set_temp_level(temp_level):
-    """Use LIRC to adjust to 60-90 fan temperature
-        Expects temp_level >= 60 and temp_level <= 90."""
+    """Use LIRC to adjust to 60-80 fan temperature
+        Expects temp_level >= 60 and temp_level <= 80."""
     # # TODO:
 
 def get_slot_value(slot_name):
@@ -54,18 +56,17 @@ def homepage():
 
 @ask.launch
 def start_skill():
-    speech_text = "You can ask me to change your Dyson fan settings"
-    return statement(speech_text)
+    return statement('You can ask me to change your Dyson fan settings')
 
 @ask.intent('toggle_power')
 def toggle_power():
     send_power()
-    return statement('Okay, ending toggle power intent handling')
+    return statement('Okay, toggling power')
 
 @ask.intent('toggle_swivvle')
 def toggle_swivvle():
     send_swivel()
-    return statement('Okay, ending toggle swivel intent handling')
+    return statement('Okay, toggling swivel')
 
 @ask.intent('set_fan_settings')
 def set_fan_settings():
@@ -73,9 +74,9 @@ def set_fan_settings():
 # def set_fan_settings(temp_mode, power_level, temp_level, power_mode):
 
     # Using sdk
-    temp_mode = get_slot_value("temp_mode") # 'hot' or 'cold'
-    power_level = get_slot_value("power_level") # 1-9
-    temp_level = get_slot_value("temp_level") # 60-90
+    temp_mode = get_slot_value('temp_mode') # 'hot' or 'cold'
+    power_level = get_slot_value('power_level') # 1-9
+    temp_level = get_slot_value('temp_level') # 60-80
 
     output = []
 
@@ -88,8 +89,6 @@ def set_fan_settings():
     if temp_level:
         output.append(f'Temp level was toggled to {temp_level} degrees')
         set_temp_level(temp_level)
-
-    output.append('Ending set fan settings intent handling')
 
     return statement(', '.join(output))
 
