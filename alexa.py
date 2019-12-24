@@ -48,6 +48,8 @@ def get_slot_value(slot_name):
 # "My development endpoint is a sub-domain of a domain that has a wildcard certificate from a certificate authority."
 app = Flask(__name__)
 ask = Ask(app, '/voice_dyson')
+
+# Verify request came from voice_dyson skill
 app.config["ASK_APPLICATION_ID"] = "amzn1.ask.skill.e033e61a-290c-46cf-b4cb-679d9ec858a4"
 
 @app.route('/')
