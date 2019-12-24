@@ -2,22 +2,47 @@ turn {power_mode}
 power {power_mode}
 turn to {power_level}
 set to {power_level}
+change to {power_level}
+turn to level {power_level}
+set to level {power_level}
+change to level {power_level}
+turn to power level {power_level}
+set to power level {power_level}
+change to power level {power_level}
+turn level to {power_level}
+set level to {power_level}
+change level to {power_level}
+turn level to level {power_level}
+set level to level {power_level}
+change level to level {power_level}
+turn to power level {power_level}
+set to power level {power_level}
+change to power level {power_level}
+turn power level to {power_level}
+set power level to {power_level}
+change power level to {power_level}
+turn power level to level {power_level}
+set power level to level {power_level}
+change level to level {power_level}
 set to {temp_level} degrees
 turn to {temp_level} degrees
 set to {temp_level} degree
 turn to {temp_level} degree
 set temperature to {temp_level} degrees
-set temperature to {temp_level} degrees
+set the temperature to {temp_level} degrees
 set temperature to {temp_level} degree
-set temperature to {temp_level} degree
+set the temperature to {temp_level} degree
 turn temperature to {temp_level} degrees
-turn temperature to {temp_level} degrees
+turn the temperature to {temp_level} degrees
 turn temperature to {temp_level} degree
-turn temperature to {temp_level} degree
+turn the temperature to {temp_level} degree
 change temperature to {temp_level} degrees
-change temperature to {temp_level} degrees
+change the temperature to {temp_level} degrees
 change temperature to {temp_level} degree
-change temperature to {temp_level} degree
+change the temperature to {temp_level} degree
+change mode to {temp_mode}
+change to {temp_mode} mode
+change to {temp_mode}
 turn to {power_level} on {temp_mode} at {temp_level} degrees
 set to {temp_mode} on {power_level} at {temp_level} degrees
 set to {temp_mode} at {temp_level} degrees
