@@ -38,10 +38,25 @@ class SetFanSettingsIntentHandler(AbstractRequestHandler):
 
     def handle(self, handler_input):
         # type: (HandlerInput) -> Response
-        speech_text = "Okay"
 
-        handler_input.response_builder.speak(speech_text).set_should_end_session(
-            True)
+        # Do something here with IR blaster
+        power_mode = get_slot_value(handler_input=handler_input, slot_name="power_mode")
+        temp_mode = get_slot_value(handler_input=handler_input, slot_name="temp_mode")
+        fan_num = get_slot_value(handler_input=handler_input, slot_name="fan_num")
+        degrees = get_slot_value(handler_input=handler_input, slot_name="degrees")
+
+        if power_mode:
+            handler_input.response_builder.speak(f'Power was toggled to {power_mode}')
+        if temp_mode:
+            handler_input.response_builder.speak(f'Temp mode was toggled to {temp_mode}')
+        if fan_num:
+            handler_input.response_builder.speak(f'Fan number was toggled to {fan_num}')
+        if degrees:
+            handler_input.response_builder.speak(f'Fan was toggled to {degrees} degrees')
+
+        speech_text = "Ending set fan settings intent handling"
+
+        handler_input.response_builder.speak(speech_text).set_should_end_session(True)
         return handler_input.response_builder.response
 
 
