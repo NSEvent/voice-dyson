@@ -1,0 +1,250 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "raspberry pie",
+            "intents": [
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.YesIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.FallbackIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.NoIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                },
+                {
+                    "name": "set_fan_settings",
+                    "slots": [
+                        {
+                            "name": "temp_mode",
+                            "type": "temp_mode"
+                        },
+                        {
+                            "name": "fan_num",
+                            "type": "AMAZON.NUMBER"
+                        },
+                        {
+                            "name": "degrees",
+                            "type": "AMAZON.NUMBER"
+                        },
+                        {
+                            "name": "power_mode",
+                            "type": "power_mode"
+                        }
+                    ],
+                    "samples": [
+                        "set the fan to {degrees} degrees",
+                        "turn the fan to {degrees} degrees",
+                        "turn the fan to {power_mode}",
+                        "turn the fan {power_mode}",
+                        "turn the fan to {fan_num}",
+                        "set the fan to {fan_num}",
+                        "turn the fan to {fan_num} on {temp_mode} at {degrees} degrees",
+                        "set the fan to {temp_mode} on {fan_num} at {degrees} degrees",
+                        "set the fan to {temp_mode} at {degrees} degrees",
+                        "set the fan to {fan_num} at {temp_mode} at {degrees} degrees",
+                        "set the fan to {temp_mode} at {fan_num} at {degrees} degrees",
+                        "turn the fan to {temp_mode} at {fan_num} at {degrees} degrees",
+                        "turn the fan to {temp_mode} on {fan_num} at {degrees} degrees",
+                        "turn the fan to {temp_mode} at {degrees} degrees",
+                        "turn the fan to {fan_num} on {temp_mode}",
+                        "set the fan to {temp_mode} on {fan_num}",
+                        "set the fan to {temp_mode}",
+                        "set the fan to {fan_num} at {temp_mode}",
+                        "set the fan to {temp_mode} at {fan_num}",
+                        "turn the fan to {temp_mode} at {fan_num}",
+                        "turn the fan to {temp_mode} on {fan_num}",
+                        "turn the fan to {temp_mode}"
+                    ]
+                }
+            ],
+            "types": [
+                {
+                    "name": "temp_mode",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "cold",
+                                "synonyms": [
+                                    "cool"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "hot",
+                                "synonyms": [
+                                    "heat",
+                                    "warm"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "power_mode",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "off"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "on"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "dialog": {
+            "intents": [
+                {
+                    "name": "set_fan_settings",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "temp_mode",
+                            "type": "temp_mode",
+                            "confirmationRequired": false,
+                            "elicitationRequired": false,
+                            "prompts": {},
+                            "validations": [
+                                {
+                                    "type": "hasEntityResolutionMatch",
+                                    "prompt": "Slot.Validation.379884397959.1562004902791.593609559625"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "fan_num",
+                            "type": "AMAZON.NUMBER",
+                            "confirmationRequired": false,
+                            "elicitationRequired": false,
+                            "prompts": {},
+                            "validations": [
+                                {
+                                    "type": "isInSet",
+                                    "prompt": "Slot.Validation.379884397959.391684503056.83079227126",
+                                    "values": [
+                                        "1",
+                                        "2",
+                                        "3",
+                                        "4",
+                                        "5",
+                                        "6",
+                                        "7",
+                                        "8",
+                                        "9",
+                                        "10"
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "name": "degrees",
+                            "type": "AMAZON.NUMBER",
+                            "confirmationRequired": false,
+                            "elicitationRequired": false,
+                            "prompts": {},
+                            "validations": [
+                                {
+                                    "type": "isLessThanOrEqualTo",
+                                    "prompt": "Slot.Validation.379884397959.146369401923.468760018304",
+                                    "value": "80"
+                                },
+                                {
+                                    "type": "isGreaterThanOrEqualTo",
+                                    "prompt": "Slot.Validation.379884397959.146369401923.1184845584314",
+                                    "value": "60"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "power_mode",
+                            "type": "power_mode",
+                            "confirmationRequired": false,
+                            "elicitationRequired": false,
+                            "prompts": {},
+                            "validations": [
+                                {
+                                    "type": "hasEntityResolutionMatch",
+                                    "prompt": "Slot.Validation.379884397959.700817514600.276827292259"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "delegationStrategy": "ALWAYS"
+        },
+        "prompts": [
+            {
+                "id": "Slot.Validation.379884397959.1562004902791.593609559625",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Please use hot or cold to change temperature settings"
+                    }
+                ]
+            },
+            {
+                "id": "Slot.Validation.379884397959.391684503056.83079227126",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Please specify a value that is between one and ten"
+                    }
+                ]
+            },
+            {
+                "id": "Slot.Validation.379884397959.700817514600.276827292259",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Please use on or off to toggle the fan"
+                    }
+                ]
+            },
+            {
+                "id": "Slot.Validation.379884397959.146369401923.468760018304",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Please use a temperature that is eighty degrees or below"
+                    }
+                ]
+            },
+            {
+                "id": "Slot.Validation.379884397959.146369401923.1184845584314",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Please use a temperature that is sixty degrees or below"
+                    }
+                ]
+            }
+        ]
+    }
+}
