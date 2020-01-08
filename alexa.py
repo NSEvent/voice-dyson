@@ -1,10 +1,13 @@
 from flask import Flask
 from flask_ask import Ask, statement, question, session, request
 import json
+import subprocess
+
+REMOTE_CONF = 'dyson'
 
 def send_power():
     """Use LIRC to send swivel signal."""
-    # # TODO:
+    subprocess.run(['irsend','SEND_ONCE',REMOTE_CONF,'KEY_POWER'])
     return
 
 def send_swivel():
