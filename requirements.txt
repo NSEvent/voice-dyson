@@ -3,7 +3,7 @@ asn1crypto==1.2.0
 cffi==1.13.2
 Click==7.0
 cryptography==2.1.4
-Flask==0.12.1
+Flask==1.0
 Flask-Ask==0.9.8
 idna==2.8
 itsdangerous==1.1.0
