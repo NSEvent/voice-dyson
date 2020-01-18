@@ -73,3 +73,5 @@ Your setup should now be done! Make sure your *ir-tx* IR LED is pointed towards 
 
 "Alexa, ask my fan to turn to power level five."
 
+## Author
+Kevin Tang
