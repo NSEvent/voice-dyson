@@ -4,6 +4,8 @@ A custom Alexa skill paired with a Raspberry Pi to control a [Dyson Pure Hot+Coo
 ## About
 This repo contains code to run a custom Alexa skill on the Alexa Skills Kit Developer Console and a Flask web server on your Raspberry Pi to control a Dyson fan via IR signals.
 
+Although this setup is intended for a specific device, these files may be modified to use Alexa to control any device that can be controlled with an IR remote.
+
 *User speech command -> Alexa skill -> JSON with parsed arguments -> Flask server -> LIRC -> Dyson fan changes state*
 
 Tested with Python 3.7 running Raspbian Buster 4.19 using an [IR Remote Shield v1.0](http://www.raspberrypiwiki.com/index.php/Raspberry_Pi_IR_Control_Expansion_Board)
