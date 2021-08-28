@@ -8,7 +8,7 @@ Although this setup is intended for a specific device, these files may be modifi
 
 *User speech command -> Alexa skill -> JSON with parsed arguments -> Flask server -> LIRC -> Dyson fan changes state*
 
-Tested with Python 3.7 running Raspbian Buster 4.19 using an [IR Remote Shield v1.0](http://www.raspberrypiwiki.com/index.php/Raspberry_Pi_IR_Control_Expansion_Board)
+Tested with Python 3.7 running [Raspbian Buster 2019-06-20](https://downloads.raspberrypi.org/raspbian_lite/images/raspbian_lite-2019-06-24/) using an [IR Remote Shield v1.0](http://www.raspberrypiwiki.com/index.php/Raspberry_Pi_IR_Control_Expansion_Board)
 
 ## Setup
 ### Alexa skill
